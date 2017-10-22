@@ -17,11 +17,6 @@ body {
   color: #4a3553;
   background-color: #ffffff;
 }
-
-a {
-  color: #ffb251;
-  text-decoration: none;
-}
 /* Slider Part */
 
 .slider-wrapper {
@@ -74,23 +69,40 @@ a {
   text-align: center;
   flex-direction: column;
 }
-.slider > li > div > .slide-title {
+.slider {
   font-family: "Indie Flower", cursive;
+}
+.slider > li > div > .slide-title {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
   color: white;
   margin: 0 auto;
   font-size: 13vw;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 .slider > li > div > .quick-link {
-  background-color: wheat;
-  width: 80vw;
-  height: 40vh;
-  margin: 10vh auto;
+  width: 60vmin;
+  height: 60vmin;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .quick-link a {
+  width: 20vmin;
+  height: 20vmin;
+  margin: 5vmin 5vmin;
+  text-decoration: none;
+}
+.quick-link a img {
+  width: 100%;
+  height: 100%;
+}
+.quick-link a .title {
+  width: 100%;
+  font-size: 5vmin;
 
+  color: white;
 }
 .slider > li h2{
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -142,7 +154,7 @@ a {
     font-size: 1.4rem;
   }
   .slider > li > div .slide-title {
-    font-size: 10vw; 
+    font-size: 7vw; 
   }
   .slider li div .search {
     padding-left: 5vw;
