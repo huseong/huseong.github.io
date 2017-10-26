@@ -80,7 +80,8 @@ body {
   font-size: 13vw;
   padding-top: 10vh;
 }
-.slider > li > div > .quick-link {
+/* Main Page*/
+.quick-link {
   width: 60vmin;
   height: 60vmin;
   margin: 0 auto;
@@ -101,10 +102,25 @@ body {
 .quick-link a .title {
   width: 100%;
   font-size: 5vmin;
-
+  margin: 0 auto;
   color: white;
 }
-.slider > li h2{
+/* Scheduler Page */
+.scheduler ul {
+  display: flex;
+  margin: 0 auto;
+  width: 70vw;
+  background-color: #CCDDFF;
+  border-radius: 20px;
+}
+.scheduler ul li {
+  width: 10vw;
+  height: 60vh;
+  border-style: solid;
+  border-width: 0.1vw;
+  border-color: red;
+}
+.slider > li h2 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
   margin: 0 auto 14px;
