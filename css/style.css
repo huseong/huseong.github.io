@@ -49,7 +49,7 @@ body {
   opacity: 1;
 }
 .slider > li:first-of-type {
-  background-color: #92819f;
+  background-color: #CAB5DB;
 }
 .slider > li:nth-of-type(2) {
   background-color: #C49BA8;
@@ -82,17 +82,17 @@ body {
 }
 /* Main Page*/
 .quick-link {
-  width: 60vmin;
-  height: 60vmin;
+  width: 48vmin;
+  height: 48vmin;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .quick-link a {
-  width: 20vmin;
-  height: 20vmin;
-  margin: 5vmin 5vmin;
+  width: 16vmin;
+  height: 16vmin;
+  margin: 4vmin 4vmin;
   text-decoration: none;
 }
 .quick-link a img {
@@ -101,7 +101,7 @@ body {
 }
 .quick-link a .title {
   width: 100%;
-  font-size: 5vmin;
+  font-size: 4.1vmin;
   margin: 0 auto;
   color: white;
 }

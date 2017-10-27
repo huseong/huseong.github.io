@@ -6,11 +6,11 @@ jQuery(document).ready(($) => {
   const secondCustomMinaAnimation = bezier(.27,.5,.6,.99, epsilon)
   const initSlider = sliderWrapper => {
 		//cache jQuery objects
-		const slider = sliderWrapper.find('.slider'),
-			sliderNavigation = sliderWrapper.find('.slider-navigation').find('li'),
-			svgCoverLayer = sliderWrapper.find('div.svg-cover'),
-			pathId = svgCoverLayer.find('path').attr('id'),
-			svgPath = Snap('#'+pathId);
+		const slider = sliderWrapper.find('.slider')
+		const sliderNavigation = sliderWrapper.find('.slider-navigation').find('li')
+		const	svgCoverLayer = sliderWrapper.find('div.svg-cover')
+		const	pathId = svgCoverLayer.find('path').attr('id')
+		const svgPath = Snap('#'+pathId)
 		//store path 'd' attribute values	
 		var pathArray = [];
 		pathArray[0] = svgCoverLayer.data('step1');
@@ -24,16 +24,14 @@ jQuery(document).ready(($) => {
 		pathArray[8] = svgCoverLayer.data('step5');
 		pathArray[9] = svgCoverLayer.data('step10');	
 
-		//update visible slide when user clicks .slider-navigation buttons
 		sliderNavigation.on('click', function(event) {
 			event.preventDefault();
 			const selectedItem = $(this);
 			if(!selectedItem.hasClass('selected')) {
-				// if it's not already selected
-				const selectedSlidePosition = selectedItem.index(),
-					selectedSlide = slider.children('li').eq(selectedSlidePosition),
-					visibleSlide = slider.find('.visible'),
-					visibleSlidePosition = visibleSlide.index()
+				const selectedSlidePosition = selectedItem.index()
+				const	selectedSlide = slider.children('li').eq(selectedSlidePosition)
+				const	visibleSlide = slider.find('.visible')
+				const	visibleSlidePosition = visibleSlide.index()
 				const direction = visibleSlidePosition < selectedSlidePosition;
 				updateSlide(visibleSlide, selectedSlide, direction, svgCoverLayer, sliderNavigation, pathArray, svgPath);
 			}
